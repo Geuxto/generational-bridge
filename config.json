@@ -1,7 +1,11 @@
 {
-    "token": "YOUR_TOKEN_HERE",
-    "plugin_path": "./plugins",
+    "token": "OTIxMDg0ODA3Mjk4MDU2MjAz.YbtxEg.b9m5CLGMDnMo7rDurswD1t7E5ec",
+    "plugin_path": "L:\\repos\\generational-bridge\\plugins",
     "authed": [
-        
-    ]
+        279611326848958465
+    ],
+    "discord_webhook": "https://discord.com/api/webhooks/id/token",
+    "discord_channel": "id",
+    "irc_channel": "#channel",
+    "irc_nick": "nick"
 }
