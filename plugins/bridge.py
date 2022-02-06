@@ -4,10 +4,10 @@ from ircked.message import *
 hooks = ["READY", "MESSAGE_CREATE"]
 
 # replace all this stuff and it should maybe probablyt just werk (tm)
-_discord_webhook = "https://discord.com/api/webhooks/937542041678798969/U6_y4tw-Kjrjz4ivtiVqw4Sk8E4pFR51VtFD0nd8r_2jrwLtzFInqpfQBJJIkyoYdynk"
-_discord_channel = "810037417871933521"
-_irc_channel = "#station"
-_irc_nick = "s00bridge"
+_discord_webhook = "https://discord.com/api/webhooks/id/token"
+_discord_channel = "id"
+_irc_channel = "#channel"
+_irc_nick = "genbridge"
 
 dorfl = None
 
