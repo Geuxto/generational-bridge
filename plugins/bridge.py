@@ -11,6 +11,8 @@ _irc_nick = "s00bridge"
 
 dorfl = None
 
+disc_bot_instance = None
+
 init = False
 
 def run(event, ctx, bot):
@@ -18,6 +20,9 @@ def run(event, ctx, bot):
     global dorfl
     if event == "READY":
         init = True
+        disc_bot_instance = bot
+        if init:
+            return
         dorfl = irc_bot(nick = _irc_nick)
         dorfl.connect_register("irc.rizon.net", 7000)
         
