@@ -34,5 +34,7 @@ def run(event, ctx, bot):
 
         dorfl.run(event_handler = magic)
     elif event == "MESSAGE_CREATE" and init == True and ctx["channel_id"] == disc_bot_instance.config["discord_channel"] and not(bool(ctx.get("webhook_id"))):
-        dorfl.sendraw(privmsg.build(disc_bot_instance.config["irc_nick"], disc_bot_instance.config["irc_channel"], (ctx["author"]["username"] if ctx.get("member").get("nick") == None else ctx["member"]["nick"])+" (discord): "+ctx["content"]).msg)
-    
+        authname = (ctx["author"]["username"] if ctx.get("member").get("nick") == None else ctx["member"]["nick"])
+        dorfl.sendraw(privmsg.build(disc_bot_instance.config["irc_nick"], disc_bot_instance.config["irc_channel"], authname+" (discord): "+ctx["content"]).msg)
+        for att in ctx["attachments"]:
+            dorfl.sendraw(privmsg.build(disc_bot_instance.config["irc_nick"], disc_bot_instance.config["irc_channel"], authname + " uploaded a file"+" ("+att["filename"]+"): "+att["proxy_url"]).msg)
