@@ -4,7 +4,7 @@
     "authed": [
 
     ],
-    "discord_webhook": "https://discord.com/api/webhooks/id/token",
+    "discord_webhook": "/webhooks/id/token",
     "discord_channel": "id",
     "irc_channel": "#channel",
     "irc_nick": "nick"
