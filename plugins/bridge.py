@@ -30,7 +30,7 @@ def run(event, ctx, bot):
                 message.manual(":"+msg.parameters[0], "PRIVMSG", [msg.prefix[1:].split("!")[0], ":\x01dorfl bot\x01"]).send(ctx.socket)
             if msg.command == "PRIVMSG" and ("py-ctcp" not in msg.prefix):
                 pm = privmsg.parse(msg)
-                disc_bot_instance.execute_webhook(disc_bot_instance.config["discord_webhook"], pm.bod, pm.fr.split("!")[0]+" (IRC)")
+                disc_bot_instance.api.execute_webhook(disc_bot_instance.config["discord_webhook"], pm.bod, pm.fr.split("!")[0]+" (IRC)")
 
         dorfl.run(event_handler = magic)
     elif event == "MESSAGE_CREATE" and init == True and ctx["channel_id"] == disc_bot_instance.config["discord_channel"] and not(bool(ctx.get("webhook_id"))):
